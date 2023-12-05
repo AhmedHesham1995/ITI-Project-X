@@ -8,6 +8,7 @@ import { Outlet , NavLink } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import DarkMode from "../DarkMode";
 const HomeNav = () => {
 
   const [user, setUser] = useState({});
@@ -116,6 +117,22 @@ const HomeNav = () => {
   };
   // const {t}=useTranslation()
 
+  const [theme, setTheme] = useState(
+    localStorage.getItem("selectedTheme") || "light"
+  );
+
+  useEffect(() => {
+    // Update the theme whenever it changes in local storage
+    const storedTheme = localStorage.getItem("selectedTheme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
+  const getColorStyle = (isActive) => {
+    return isActive
+      ? { color: theme === "dark" ? "white" : "black", textDecoration: "none" }
+      : { color: theme === "dark" ? "gray" : "gray", textDecoration: "none" };
+  };
     return (
         <section className="home">
         <Row>
@@ -128,6 +145,12 @@ const HomeNav = () => {
               <div className="center__header">
                 <div className="row mt-2 ms-2 ">
                   <div className="col text-start h4">{t("home.part1")}</div>
+                  <div
+                  className="col-2 ms-auto"
+                  style={{ marginLeft: "auto", marginRight: "1rem" }}
+                >
+                  <DarkMode />
+                </div>
                   {/* <div className="col text-end">
                   <FontAwesomeIcon icon={faGear} className="right-search-icon me-5" />
                   </div>  */}

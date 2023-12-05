@@ -353,6 +353,21 @@ const Profile = () => {
       console.error(`Error toggling ${action}:`, error);
     }
   };
+  const [theme, setTheme] = useState(localStorage.getItem('selectedTheme') || 'light');
+
+ useEffect(() => {
+   // Update the theme whenever it changes in local storage
+   const storedTheme = localStorage.getItem('selectedTheme');
+   if (storedTheme) {
+     setTheme(storedTheme);
+   }
+ }, []);
+ const getColorStyle = (isActive) => {
+   return isActive
+     ? { color: (theme==="dark")?"white":"black", textDecoration: "none" }
+     : { color: (theme==="dark") ? "gray" : "gray", textDecoration: "none" };
+ };
+
 const {t}=useTranslation()
   return (
     <div className="bodyprofile">
@@ -365,11 +380,8 @@ const {t}=useTranslation()
             sm={12}
             md={6}
             className="center"
-            style={{
-              backgroundColor: "rgb(0, 0, 0)",
-              border: "#c71818",
-              position: "relative",
-            }}
+            
+            
           >
             <div>
               {user.profileCover && <img className="cover-picture" src={user.profileCover} alt="cover" />}
@@ -379,11 +391,22 @@ const {t}=useTranslation()
                 {user.profilePicture && <img src={user.profilePicture} alt="Profile" />}
                 <h4>{user.name}</h4>
                 <div className="user-profile-info-es">
-                  <h6>
+                  {/* <h6>
                     <NavLink to='/profilefollowers' style={{ color: 'white' }}>{t("home.part13")}: {user.followers?.length}</NavLink>
                   </h6>
                   <h6>
                     <NavLink to='/profilefollowing' style={{ color: 'white' }}>{t("home.part8")}: {user.following?.length}</NavLink>
+                  </h6> */}
+                   <h6>
+                    <NavLink to="/profilefollowers" style={{textDecoration: "none"}}>
+                      Followers: {user.followers?.length}
+                      
+                    </NavLink>
+                  </h6>
+                  <h6>
+                    <NavLink to="/profilefollowing" style={{textDecoration: "none"}}>
+                      Following: {user.following?.length}
+                    </NavLink>
                   </h6>
                   <h6>{user.email}</h6>
                   <h6>{t("home.part15")} {user.bio}</h6>

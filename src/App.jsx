@@ -125,7 +125,11 @@ function App() {
   useEffect(() => {
     console.log(user);
   }, []);
-
+  useEffect(() => {
+    // Set the data-theme attribute based on the value in local storage
+    const storedTheme = localStorage.getItem('selectedTheme') || 'light';
+    document.body.setAttribute('data-theme', storedTheme);
+  }, []);
   return (
     // <AuthProvider value={{isLogin,setLogin}}>
     //  <Provider store={store}><RouterProvider router={router} /></Provider>

@@ -239,39 +239,51 @@ const getFollowState = async (req, res) => {
 //authentication
 async function login(req,res){
     const {email,password}=req.body
-    if(!email || !password){
-        return res.status(400).json({message:"you must provide email and password"})
+    if(!email && !password){
+        return res.status(400).json({message:"you must enter your email and password"})
     }
-
+    if(!email ){
+        return res.status(400).json({message:"you must enter your email"})
+    }
+    if( !password){
+        return res.status(400).json({message:"you must enter your password"})
+    }
     const user=await usersModel.findOne({email:email})
     if(!user){
-        return res.status(404).json({message:"invalid email or password"})
+        return res.status(404).json({message:"you must sign up first"})
     }
 
-    const isValid=await bcrypt.compare(password,user.password)
+
+    const isValid=await bcrypt.compare(password,user.password);
     if(!isValid){
-    //     return res.status(401).json({message:"invalid password"})
-    // }
-    // if (!user.verified) {
-    //     let token = await Token.findOne({ userId: user._id });
-    //     if (!token) {
-    //         token = await new Token({
-    //             userId: user._id,
-    //             token: crypto.randomBytes(32).toString("hex"),
-    //         }).save();
-    //         const url = `http://localhost:5173/users/${user.id}/verify/${token.token}`;
-    //         await sendMail(user.email, "Verify Email", url);
-    //     }
-
-    //     return res
-    //         .status(400)
-    //         .send({ message: "An Email sent to your account please verify" });
+        return res.status(401).json({message:"invalid password"})
     }
+    if (user.status == "Inactive" ) {
+            return res.status(401).json({message:"Your account is inactive. Please contact support for assistance."})
+    }
+    if (!user.verified) {
+        // let token = await Token.findOne({ userId: user._id });
+        // if (!token) {
+        //     token = await new Token({
+        //         userId: user._id,
+        //         token: crypto.randomBytes(32).toString("hex"),
+        //     }).save();
+        //     const url = `http://localhost:5173/users/${user.id}/verify/${token.token}`;
+        //     await sendMail(user.email, "Verify Email", url);
+        // }
+
+        return res
+            .status(400)
+            .send({ message: "An Email sent to your account please verify" });
+     }
+    // // console.log(user.status);
+    // // 
 
     //generate token
     const token=jwt.sign({id:user._id,name:user.username},process.env.SECRET)
     res.status(200).json({token:token, id:user._id})
 }
+
 
 async function loginDashboard(req,res){
     const {email,password}=req.body

@@ -28,7 +28,7 @@ const Join = () => {
 
     return (
         <>
-            <div className="bg-black">
+            <div className="joinpage">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col">
