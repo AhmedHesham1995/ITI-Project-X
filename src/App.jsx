@@ -38,6 +38,7 @@ import ProfileSaved from "./pages/Profile/profileSaved";
 import ProfileReposts from "./pages/Profile/profileReposts";
 import ProfileFollowers from "./pages/Profile/profileFollowers";
 import ProfileFollowing from "./pages/Profile/ProfileFollowing";
+import Messages from "./pages/Messages/Messages";
 
 import EmailVerify from "./pages/emailVerify";
 
@@ -94,6 +95,7 @@ function App() {
         { path: "editProfile", element: <EditProfile /> },
         { path: "ProfileFollowers", element: <ProfileFollowers /> },
         { path: "ProfileFollowing", element: <ProfileFollowing /> },
+        { path: "Messages", element: <Messages /> },
         {
           path: "/profile",
           element: <Protected><Profile /></Protected>,

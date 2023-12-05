@@ -9,7 +9,7 @@ const {auth} = require('../middlewares/auth') ;
 
 router.post('/' ,auth, createMessage)
 
-router.get('/' ,auth, getAllMessages)
+router.get('/:conversationId' ,auth, getAllMessages)
 
 router.get ('/:id' ,auth,getMessageById)
 
