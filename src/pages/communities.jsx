@@ -909,7 +909,7 @@ const Communities = () => {
   };
 
   return (
-    <div className="bodyprofile" style={{ color: "#fff" }}>
+    <div className="bodyprofile" >
       <Row className="row">
         <Col sm={12} md={2}>
           <Navbar />
