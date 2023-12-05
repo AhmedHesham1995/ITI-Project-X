@@ -75,9 +75,13 @@ const addUser=async(req,res)=>{
 }
 
 const getOneUser=async(req,res)=>{
-    let userId=req.params.id
+    const userId=req.params.id
+    // const userId = req.query.userId;
+
     try{
-        let wanted=await usersModel.findOne({_id:userId})
+        const wanted=await usersModel.findOne({_id:userId})
+        if (!wanted) {
+            return res.status(404).json({ message: "User not found" });}
         // console.log(wanted);
         res.status(200).json({message:"s",data:wanted})
     }

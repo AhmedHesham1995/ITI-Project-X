@@ -17,7 +17,9 @@ const createMessage=async(req,res)=>{
 // Get all messages
 const getAllMessages = async (req, res) => {
   try {
-    const messages = await MessageModel.find().populate('senderId').populate('recipientId');
+    const messages = await MessageModel.find({
+      conversationId: req.params.conversationId,
+    })
     res.json(messages);
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
