@@ -31,10 +31,10 @@ const Join = () => {
             <div className="joinpage">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col">
+                        <div className="col join-logo">
                             <img className="logoWH" src={logo} alt="logo" />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 join" >
                             <div className="fw-bold mx-auto text-white">
                                 <p className="HNText fw-bold">Happening now</p>
                                 <br />

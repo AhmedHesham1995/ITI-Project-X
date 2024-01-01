@@ -13,13 +13,13 @@ const HomeNav = () => {
 
   const [user, setUser] = useState({});
   const [following, setNonFollowings] = useState([]);
-  // const apiUrlFollowings = `http://localhost:4005/users/following`;
-  const apiUrlFollowings = `http://localhost:4005/users/${localStorage.getItem('ID')}/following`;
+  // const apiUrlFollowings = `https://api-3m0a.onrender.com/users/following`;
+  const apiUrlFollowings = `https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}/following`;
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+        const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
         const data = response.data.data;
         setUser(data);
       } catch (error) {
@@ -32,7 +32,7 @@ const HomeNav = () => {
         const authToken = localStorage.getItem('token');
   
         // Fetch all users
-        const usersResponse = await axios.get("http://localhost:4005/users", {
+        const usersResponse = await axios.get("https://api-3m0a.onrender.com/users", {
           headers: {
             Authorization: `${authToken}`,
           },
@@ -69,7 +69,7 @@ const HomeNav = () => {
     try {
       const authToken = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:4005/users/follow/${followingId}`,
+        `https://api-3m0a.onrender.com/users/follow/${followingId}`,
         {},
         {
           headers: {
@@ -95,7 +95,7 @@ const HomeNav = () => {
     try {
       const authToken = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:4005/users/unfollow/${followingId}`,
+        `https://api-3m0a.onrender.com/users/unfollow/${followingId}`,
         {},
         {
           headers: {
@@ -248,3 +248,17 @@ const HomeNav = () => {
 }
 
 export default HomeNav;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

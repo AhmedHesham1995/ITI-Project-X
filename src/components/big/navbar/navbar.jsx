@@ -302,7 +302,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       // console.log(userData);
 //       setUserData(userData)
@@ -521,7 +521,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       // console.log(userData);
 //       setUserData(userData)
@@ -761,7 +761,7 @@
 //   useEffect(() => {
 //     const fetchUser = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//         const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //         const userData = response.data.data;
 //         setUserData(userData);
 //       } catch (error) {
@@ -974,7 +974,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+        const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
         const userData = response.data.data;
         setUserData(userData);
       } catch (error) {
@@ -1095,48 +1095,47 @@ const changeLanguage = (language) => {
                 </NavLinkMemoized>
               </li>
               <li className="home__nav__li" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <NavLinkMemoized className="home__nav__a">
-        <FaEarthAfrica /> {t("side.part7")}
-
-      </NavLinkMemoized>
-      {isDropdownVisible && (
-        <div className="dropdown-content">
-          {/* Your dropdown content goes here */}
-          <NavLinkMemoized className="home__nav__a-hidden">
-           <p		onClick={() =>
-												changeLanguage(
-													"ar"
-												)
-											} ><input
-											type='radio'
-											id='arabic'
-											name='languge'
-											onClick={() =>
-												changeLanguage(
-													"ar"
-												)
-											}
-										/>Ar-العربية</p>
-          </NavLinkMemoized>
-          <NavLinkMemoized className="home__nav__a-hidden">
-          <p 	onClick={() =>
-												changeLanguage(
-													"en"
-												)
-											}><input
-											type='radio'
-											id='english'
-											name='languge'
-											onClick={() =>
-												changeLanguage(
-													"en"
-												)
-											}
-										/>EN-English</p>
-          </NavLinkMemoized>
-          {/* Add more items as needed */}
-        </div>
-      )}
+              <NavLinkMemoized className="home__nav__a">
+                <FaEarthAfrica /> {t("side.part7")}
+              </NavLinkMemoized>
+              {isDropdownVisible && (
+                <div className="dropdown-content">
+                  {/* Your dropdown content goes here */}
+                  <NavLinkMemoized className="home__nav__a-hidden">
+                  <p		onClick={() =>
+                                changeLanguage(
+                                  "ar"
+                                )
+                              } ><input
+                              type='radio'
+                              id='arabic'
+                              name='languge'
+                              onClick={() =>
+                                changeLanguage(
+                                  "ar"
+                                )
+                              }
+                            />Ar-العربية</p>
+                  </NavLinkMemoized>
+                  <NavLinkMemoized className="home__nav__a-hidden">
+                  <p 	onClick={() =>
+                                changeLanguage(
+                                  "en"
+                                )
+                              }><input
+                              type='radio'
+                              id='english'
+                              name='languge'
+                              onClick={() =>
+                                changeLanguage(
+                                  "en"
+                                )
+                              }
+                            />EN-English</p>
+                  </NavLinkMemoized>
+                  {/* Add more items as needed */}
+                </div>
+              )}
     </li>
             </ul>
  

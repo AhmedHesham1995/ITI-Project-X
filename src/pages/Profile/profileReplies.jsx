@@ -13,7 +13,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -29,7 +29,7 @@
 
 //   const handleDeleteReply = async (replyId) => {
 //     try {
-//       await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//       await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //       setReplies((prevReplies) =>
 //         prevReplies.filter((reply) => reply._id !== replyId)
 //       );
@@ -43,7 +43,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       console.log(userData);
 //       setUserData(userData)
@@ -135,7 +135,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -154,7 +154,7 @@
 
 //   const handleDeleteReply = async (replyId) => {
 //     try {
-//       await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//       await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //       setReplies((prevReplies) =>
 //         prevReplies.filter((reply) => reply._id !== replyId)
 //       );
@@ -165,7 +165,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       console.log(userData);
 //       setUserData(userData)
@@ -247,7 +247,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -259,7 +259,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -278,7 +278,7 @@
 
 //   // const handleDeleteReply = async (replyId) => {
 //   //   try {
-//   //     await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//   //     await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //   //     setReplies((prevReplies) =>
 //   //       prevReplies.filter((reply) => reply._id !== replyId)
 //   //     );
@@ -302,7 +302,7 @@
 //     // If the user confirms the deletion, proceed with the deletion
 //     if (result.isConfirmed) {
 //       try {
-//         await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//         await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //         setReplies((prevReplies) =>
 //           prevReplies.filter((reply) => reply._id !== replyId)
 //         );
@@ -402,7 +402,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -413,7 +413,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -447,7 +447,7 @@
 //     // If the user confirms the deletion, proceed with the deletion
 //     if (result.isConfirmed) {
 //       try {
-//         await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//         await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //         setReplies((prevReplies) =>
 //           prevReplies.filter((reply) => reply._id !== replyId)
 //         );
@@ -555,7 +555,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -571,7 +571,7 @@
 
 //   const handleDeleteReply = async (replyId) => {
 //     try {
-//       await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//       await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //       setReplies((prevReplies) =>
 //         prevReplies.filter((reply) => reply._id !== replyId)
 //       );
@@ -585,7 +585,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       console.log(userData);
 //       setUserData(userData)
@@ -677,7 +677,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -696,7 +696,7 @@
 
 //   const handleDeleteReply = async (replyId) => {
 //     try {
-//       await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//       await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //       setReplies((prevReplies) =>
 //         prevReplies.filter((reply) => reply._id !== replyId)
 //       );
@@ -707,7 +707,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData=response.data.data;
 //       console.log(userData);
 //       setUserData(userData)
@@ -789,7 +789,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -801,7 +801,7 @@
 //   useEffect(() => {
 //     const fetchReplies = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:4005/posts");
+//         const response = await axios.get("https://api-3m0a.onrender.com/posts");
 //         const allReplies = response.data.reduce(
 //           (acc, post) => acc.concat(post.replies),
 //           []
@@ -820,7 +820,7 @@
 
 //   // const handleDeleteReply = async (replyId) => {
 //   //   try {
-//   //     await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//   //     await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //   //     setReplies((prevReplies) =>
 //   //       prevReplies.filter((reply) => reply._id !== replyId)
 //   //     );
@@ -844,7 +844,7 @@
 //     // If the user confirms the deletion, proceed with the deletion
 //     if (result.isConfirmed) {
 //       try {
-//         await axios.delete(`http://localhost:4005/posts/${replyId}`);
+//         await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
 //         setReplies((prevReplies) =>
 //           prevReplies.filter((reply) => reply._id !== replyId)
 //         );
@@ -944,7 +944,7 @@ const ProfileReplies = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem("ID")}`);
+      const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem("ID")}`);
       var userData = response.data.data;
       setUserData(userData);
     } catch (error) {
@@ -955,7 +955,7 @@ const ProfileReplies = () => {
   useEffect(() => {
     const fetchReplies = async () => {
       try {
-        const response = await axios.get("http://localhost:4005/posts");
+        const response = await axios.get("https://api-3m0a.onrender.com/posts");
         const allReplies = response.data.reduce(
           (acc, post) => acc.concat(post.replies),
           []
@@ -990,7 +990,7 @@ const ProfileReplies = () => {
     // If the user confirms the deletion, proceed with the deletion
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:4005/posts/${replyId}`);
+        await axios.delete(`https://api-3m0a.onrender.com/posts/${replyId}`);
         setReplies((prevReplies) =>
           prevReplies.filter((reply) => reply._id !== replyId)
         );

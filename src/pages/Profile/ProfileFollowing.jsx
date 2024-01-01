@@ -16,7 +16,7 @@ const ProfileFollowing = () => {
     useEffect(() => {
         const fetchFollowing = async () => {
             try {
-                const response = await axios.get(`http://localhost:4005/users/${userId}/following`, {
+                const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}/following`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -34,7 +34,7 @@ const ProfileFollowing = () => {
     const handleUnfollow = async (unfollowUserId) => {
         try {
             await axios.put(
-                `http://localhost:4005/users/unfollow/${unfollowUserId}`,
+                `https://api-3m0a.onrender.com/users/unfollow/${unfollowUserId}`,
                 {},
                 {
                     headers: {

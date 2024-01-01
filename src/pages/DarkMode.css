@@ -1,0 +1,85 @@
+/* DarkMode.css */
+
+/* .dark_mode {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .dark_mode_input {
+    display: none;
+  }
+  
+  .dark_mode_label {
+    cursor: pointer;
+  }
+  
+  .sun-icon,
+  .moon-icon {
+    height: 20px;
+    width: auto;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .dark_mode {
+      
+      font-size: 14px;
+    }
+  
+    .sun-icon,
+    .moon-icon {
+      
+      height: 16px;
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DarkMode.css */
+
+.dark_mode {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust the gap as needed */
+  margin-top: 10px;
+}
+
+.dark_mode_input {
+  display: none;
+}
+
+.dark_mode_label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sun-icon,
+.moon-icon {
+  height: 20px;
+  width: auto;
+}
+
+/* Media query for screens smaller than 750px */
+@media (max-width: 750px) {
+  .dark_mode {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dark_mode_label {
+    margin-top: 8px; /* Adjust spacing between icon and label */
+  }
+}

@@ -18,7 +18,7 @@ const ProfileFollowers = () => {
     useEffect(() => {
         const fetchFollowers = async () => {
             try {
-                const response = await axios.get(`http://localhost:4005/users/${userId}/followers`, {
+                const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}/followers`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -29,7 +29,7 @@ const ProfileFollowers = () => {
                 // Fetch follow state for each follower
                 const followStateData = await Promise.all(
                     followersWithIds.map(follower =>
-                        axios.get(`http://localhost:4005/users/${follower._id}/follow-state`, {
+                        axios.get(`https://api-3m0a.onrender.com/users/${follower._id}/follow-state`, {
                             headers: {
                                 Authorization: `Bearer ${token}`,
                             },
@@ -55,7 +55,7 @@ const ProfileFollowers = () => {
     const handleFollow = async (followedUserId) => {
         try {
             await axios.put(
-                `http://localhost:4005/users/follow/${followedUserId}`,
+                `https://api-3m0a.onrender.com/users/follow/${followedUserId}`,
                 {},
                 {
                     headers: {
@@ -78,7 +78,7 @@ const ProfileFollowers = () => {
     const handleUnfollow = async (unfollowUserId) => {
         try {
             await axios.put(
-                `http://localhost:4005/users/unfollow/${unfollowUserId}`,
+                `https://api-3m0a.onrender.com/users/unfollow/${unfollowUserId}`,
                 {},
                 {
                     headers: {

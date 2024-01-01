@@ -97,7 +97,7 @@
 //   // useEffect(() => {
 //   //   const fetchLikedPosts = async () => {
 //   //     try {
-//   //       const response = await axios.get(`http://localhost:4005/users/${userId}/liked-posts`);
+//   //       const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}/liked-posts`);
 //   //       setLikedPosts(response.data);
 //   //       console.log(likedPosts);
 //   //     } catch (error) {
@@ -112,7 +112,7 @@
 // //   useEffect(() => {
 // //     const fetchLikedPosts = async () => {
 // //         try {
-// //             const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+// //             const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 // //             setLikedPosts(response.data);
 // //             console.log(likedPosts);
 // //         } catch (error) {
@@ -199,7 +199,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -212,7 +212,7 @@
 //   useEffect(() => {
 //     const fetchLikedPosts = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+//         const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 //         setLikedPosts(response.data);
 //         console.log(likedPosts);
 //       } catch (error) {
@@ -233,7 +233,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:4005/posts/`, // Replace with the correct endpoint for adding a reply
+//         `https://api-3m0a.onrender.com/posts/`, // Replace with the correct endpoint for adding a reply
 //         { text: replyText, postId, userId: localStorage.getItem('ID') },
 //         {
 //           headers: {
@@ -252,7 +252,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-repost',
+//         'https://api-3m0a.onrender.com/posts/toggle-repost',
 //         { postId },
 //         {
 //           headers: {
@@ -271,7 +271,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-like',
+//         'https://api-3m0a.onrender.com/posts/toggle-like',
 //         { postId },
 //         {
 //           headers: {
@@ -288,7 +288,7 @@
 
 //   const fetchReplies = async (postId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${postId}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${postId}`);
 //       setReplies(response.data.replies);
 //     } catch (error) {
 //       console.error('Error fetching replies:', error);
@@ -401,7 +401,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -413,7 +413,7 @@
 
 //   const fetchLikedPosts = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 //       setLikedPosts(response.data);
 //       console.log(likedPosts);
 //     } catch (error) {
@@ -434,7 +434,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:4005/posts/`, 
+//         `https://api-3m0a.onrender.com/posts/`, 
 //         { text: replyText, postId, userId: localStorage.getItem('ID') },
 //         {
 //           headers: {
@@ -453,7 +453,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-repost',
+//         'https://api-3m0a.onrender.com/posts/toggle-repost',
 //         { postId },
 //         {
 //           headers: {
@@ -472,7 +472,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-like',
+//         'https://api-3m0a.onrender.com/posts/toggle-like',
 //         { postId },
 //         {
 //           headers: {
@@ -489,7 +489,7 @@
 
 //   const fetchReplies = async (postId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${postId}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${postId}`);
 //       setReplies(response.data.replies);
 //     } catch (error) {
 //       console.error('Error fetching replies:', error);
@@ -681,7 +681,7 @@
 //   // useEffect(() => {
 //   //   const fetchLikedPosts = async () => {
 //   //     try {
-//   //       const response = await axios.get(`http://localhost:4005/users/${userId}/liked-posts`);
+//   //       const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}/liked-posts`);
 //   //       setLikedPosts(response.data);
 //   //       console.log(likedPosts);
 //   //     } catch (error) {
@@ -696,7 +696,7 @@
 // //   useEffect(() => {
 // //     const fetchLikedPosts = async () => {
 // //         try {
-// //             const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+// //             const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 // //             setLikedPosts(response.data);
 // //             console.log(likedPosts);
 // //         } catch (error) {
@@ -783,7 +783,7 @@
 
 //   const getUser = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
 //       var userData = response.data.data;
 //       setUserData(userData);
 //     } catch (error) {
@@ -796,7 +796,7 @@
 //   useEffect(() => {
 //     const fetchLikedPosts = async () => {
 //       try {
-//         const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+//         const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 //         setLikedPosts(response.data);
 //         console.log(likedPosts);
 //       } catch (error) {
@@ -817,7 +817,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:4005/posts/`, // Replace with the correct endpoint for adding a reply
+//         `https://api-3m0a.onrender.com/posts/`, // Replace with the correct endpoint for adding a reply
 //         { text: replyText, postId, userId: localStorage.getItem('ID') },
 //         {
 //           headers: {
@@ -836,7 +836,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-repost',
+//         'https://api-3m0a.onrender.com/posts/toggle-repost',
 //         { postId },
 //         {
 //           headers: {
@@ -855,7 +855,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-like',
+//         'https://api-3m0a.onrender.com/posts/toggle-like',
 //         { postId },
 //         {
 //           headers: {
@@ -872,7 +872,7 @@
 
 //   const fetchReplies = async (postId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${postId}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${postId}`);
 //       setReplies(response.data.replies);
 //     } catch (error) {
 //       console.error('Error fetching replies:', error);
@@ -994,7 +994,7 @@
 
 //   // const getUser = async () => {
 //   //   try {
-//   //     const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+//   //     const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
 //   //     var userData = response.data.data;
 //   //     setUserData(userData);
 //   //   } catch (error) {
@@ -1006,7 +1006,7 @@
 
 //   const fetchLikedPosts = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
 //       setLikedPosts(response.data);
 //       console.log(likedPosts);
 //     } catch (error) {
@@ -1030,7 +1030,7 @@
 //   //   try {
 //   //     const token = localStorage.getItem('token');
 //   //     await axios.put(
-//   //       `http://localhost:4005/posts/`,
+//   //       `https://api-3m0a.onrender.com/posts/`,
 //   //       { text: replyText, postId: selectedPost, userId: localStorage.getItem("ID") },
 //   //       {
 //   //         headers: {
@@ -1049,7 +1049,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:4005/posts/`,
+//         `https://api-3m0a.onrender.com/posts/`,
 //         { text: replyText, postId: selectedPost, userId: localStorage.getItem("ID") },
 //         {
 //           headers: {
@@ -1072,7 +1072,7 @@
 
 //   const fetchUserDetails = async (userId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/users/${userId}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}`);
 //       return response.data.data;
 //     } catch (error) {
 //       console.error('Error fetching user details:', error);
@@ -1094,7 +1094,7 @@
 
 //   const fetchReplies = async (postId) => {
 //     try {
-//       const response = await axios.get(`http://localhost:4005/posts/${postId}`);
+//       const response = await axios.get(`https://api-3m0a.onrender.com/posts/${postId}`);
 //       const repliesWithUserDetails = await fetchReplyUserDetails(response.data.replies);
 //       setReplies(repliesWithUserDetails);
 //     } catch (error) {
@@ -1106,7 +1106,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-repost',
+//         'https://api-3m0a.onrender.com/posts/toggle-repost',
 //         { postId },
 //         {
 //           headers: {
@@ -1125,7 +1125,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-like',
+//         'https://api-3m0a.onrender.com/posts/toggle-like',
 //         { postId },
 //         {
 //           headers: {
@@ -1144,7 +1144,7 @@
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.post(
-//         'http://localhost:4005/posts/toggle-saved',
+//         'https://api-3m0a.onrender.com/posts/toggle-saved',
 //         { postId },
 //         {
 //           headers: {
@@ -1177,7 +1177,7 @@
 
 //     if (isConfirmed.isConfirmed) {
 //       try {
-//         await axios.delete(`http://localhost:4005/posts/${postId}`);
+//         await axios.delete(`https://api-3m0a.onrender.com/posts/${postId}`);
 //         fetchLikedPosts();
 //         Swal.fire('Deleted!', 'Your post has been deleted.', 'success');
 //       } catch (error) {
@@ -1327,7 +1327,7 @@ const ProfileLikes = () => {
 
   const fetchLikedPosts = async () => {
     try {
-      const response = await axios.get(`http://localhost:4005/posts/${userId}/likedPosts`);
+      const response = await axios.get(`https://api-3m0a.onrender.com/posts/${userId}/likedPosts`);
       setLikedPosts(response.data.reverse());
     } catch (error) {
       console.error('Error fetching liked posts:', error);
@@ -1349,7 +1349,7 @@ const ProfileLikes = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:4005/posts/replies`,
+        `https://api-3m0a.onrender.com/posts/replies`,
         { text: replyText, postId: selectedPost, userId: localStorage.getItem('ID') },
         {
           headers: {
@@ -1371,7 +1371,7 @@ const ProfileLikes = () => {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:4005/users/${userId}`);
+      const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}`);
       return response.data.data;
     } catch (error) {
       console.error('Error fetching user details:', error);
@@ -1393,7 +1393,7 @@ const ProfileLikes = () => {
 
   const fetchReplies = async (postId) => {
     try {
-      const response = await axios.get(`http://localhost:4005/posts/${postId}`);
+      const response = await axios.get(`https://api-3m0a.onrender.com/posts/${postId}`);
       const repliesWithUserDetails = await fetchReplyUserDetails(response.data.replies);
       setReplies(repliesWithUserDetails);
     } catch (error) {
@@ -1405,7 +1405,7 @@ const ProfileLikes = () => {
   //   try {
   //     const token = localStorage.getItem('token');
   //     await axios.post(
-  //       'http://localhost:4005/posts/toggle-repost',
+  //       'https://api-3m0a.onrender.com/posts/toggle-repost',
   //       { postId },
   //       {
   //         headers: {
@@ -1423,7 +1423,7 @@ const ProfileLikes = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:4005/posts/toggle-like',
+        'https://api-3m0a.onrender.com/posts/toggle-like',
         { postId },
         {
           headers: {
@@ -1441,7 +1441,7 @@ const ProfileLikes = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:4005/posts/toggle-saved',
+        'https://api-3m0a.onrender.com/posts/toggle-saved',
         { postId },
         {
           headers: {
@@ -1473,7 +1473,7 @@ const ProfileLikes = () => {
 
     if (isConfirmed.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:4005/posts/${postId}`);
+        await axios.delete(`https://api-3m0a.onrender.com/posts/${postId}`);
         fetchLikedPosts();
         Swal.fire('Deleted!', 'Your post has been deleted.', 'success');
       } catch (error) {

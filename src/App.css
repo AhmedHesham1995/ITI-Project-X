@@ -393,8 +393,22 @@
 
 
 @media only screen and (max-width: 767px) {
-  .home__nav {
+  /* .home__nav {
     display: none;
+  } */
+
+
+  /* .home__nav__a{
+    display: block;
+  }
+
+  .home__nav__a-hidden{
+    display: none;
+  } */
+
+  .center__post__header-left__user{
+    display: block;
+    margin-left: 0 !important;
   }
 }
 
@@ -1829,4 +1843,38 @@ hr {
 
 .to-top-button:hover {
   background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 564px) {
+  .reply-input-container {
+    display: block;
+    height: 65px;
+  }
+  .reply-button{
+    margin: 15px 0;
+  }
+}
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767px) {
+  .join{
+    margin-left: 100px;
+  }
+  .join-logo{
+    display: none;
+  }
 }

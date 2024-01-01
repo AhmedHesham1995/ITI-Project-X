@@ -55,7 +55,7 @@ const EditProfile = () => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await axios.get(`http://localhost:4005/users/${localStorage.getItem('ID')}`);
+                const response = await axios.get(`https://api-3m0a.onrender.com/users/${localStorage.getItem('ID')}`);
                 const data = response.data.data;
                 setUser(data);
                 setUserData({
@@ -111,7 +111,7 @@ const EditProfile = () => {
             localStorage.removeItem('images');
             localStorage.removeItem('imagesCover');
 
-            const updatedUserData = await axios.patch(`http://localhost:4005/users/editprofile/${userId}`, {
+            const updatedUserData = await axios.patch(`https://api-3m0a.onrender.com/users/editprofile/${userId}`, {
                 name,
                 ...(latestProfilePicture && { profilePicture: latestProfilePicture }),
                 // profilePicture: latestProfilePicture,
@@ -134,7 +134,7 @@ const EditProfile = () => {
     // useEffect(() => {
     //     const fetchUserData = async () => {
     //         try {
-    //             const user = await axios.get(`http://localhost:4005/users/${userId}`);
+    //             const user = await axios.get(`https://api-3m0a.onrender.com/users/${userId}`);
 
     //             setUserData({
     //                 name: user.data.name,

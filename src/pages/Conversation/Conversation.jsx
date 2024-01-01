@@ -14,9 +14,9 @@ function Conversation({ conversation, currentUser }) {
 
         const getUser = async () => {
             try {
-                // const res = await axios('http://localhost:4005/users?userId=' + friendId)
-                // const res = await axios(`http://localhost:4005/users?userId=${friendId}`);
-                const res = await axios(`http://localhost:4005/users/${friendId}`);
+                // const res = await axios('https://api-3m0a.onrender.com/users?userId=' + friendId)
+                // const res = await axios(`https://api-3m0a.onrender.com/users?userId=${friendId}`);
+                const res = await axios(`https://api-3m0a.onrender.com/users/${friendId}`);
 
                 // setUser(res.data)
                 setUser(res.data.data);

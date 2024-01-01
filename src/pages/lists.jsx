@@ -93,7 +93,7 @@
 // import Premium from "../components/small/premium";
 // const Lists = () => {
 //     const [users, setUsers] = useState([]);
-//     const apiUrl = "http://localhost:4005/users";
+//     const apiUrl = "https://api-3m0a.onrender.com/users";
   
 //     useEffect(() => {
 //       const fetchUsers = async () => {
@@ -134,7 +134,7 @@
 //         const authToken = localStorage.getItem('token');
     
 //         const response = await axios.put(
-//           `http://localhost:4005/users/follow/${userId}`,
+//           `https://api-3m0a.onrender.com/users/follow/${userId}`,
 //           {},
 //           {
 //             headers: {
@@ -158,7 +158,7 @@
 //         const authToken = localStorage.getItem('token');
     
 //         const response = await axios.put(
-//           `http://localhost:4005/users/unfollow/${userId}`,
+//           `https://api-3m0a.onrender.com/users/unfollow/${userId}`,
 //           {},
 //           {
 //             headers: {
@@ -247,7 +247,7 @@
 
 // const Lists = () => {
 //   const [users, setUsers] = useState([]);
-//   const apiUrl = "http://localhost:4005/users";
+//   const apiUrl = "https://api-3m0a.onrender.com/users";
 
 //   useEffect(() => {
 //     const fetchUsers = async () => {
@@ -257,7 +257,7 @@
 //         const loggedUserId = localStorage.getItem("ID");
 
 //         const followingsResponse = await axios.get(
-//           `http://localhost:4005/users/${loggedUserId}/following`,
+//           `https://api-3m0a.onrender.com/users/${loggedUserId}/following`,
 //           {
 //             headers: {
 //               Authorization: `${authToken}`,
@@ -300,7 +300,7 @@
 //       const authToken = localStorage.getItem("token");
 
 //       const response = await axios.put(
-//         `http://localhost:4005/users/follow/${userId}`,
+//         `https://api-3m0a.onrender.com/users/follow/${userId}`,
 //         {},
 //         {
 //           headers: {
@@ -326,7 +326,7 @@
 //       const authToken = localStorage.getItem("token");
 
 //       const response = await axios.put(
-//         `http://localhost:4005/users/unfollow/${userId}`,
+//         `https://api-3m0a.onrender.com/users/unfollow/${userId}`,
 //         {},
 //         {
 //           headers: {
@@ -466,7 +466,7 @@ import { useTranslation } from "react-i18next";
 const Lists = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const apiUrl = "http://localhost:4005/users";
+  const apiUrl = "https://api-3m0a.onrender.com/users";
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -476,7 +476,7 @@ const Lists = () => {
         const loggedUserId = localStorage.getItem("ID");
 
         const followingsResponse = await axios.get(
-          `http://localhost:4005/users/${loggedUserId}/following`,
+          `https://api-3m0a.onrender.com/users/${loggedUserId}/following`,
           {
             headers: {
               Authorization: `${authToken}`,
@@ -520,7 +520,7 @@ const Lists = () => {
       const authToken = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:4005/users/follow/${userId}`,
+        `https://api-3m0a.onrender.com/users/follow/${userId}`,
         {},
         {
           headers: {
@@ -546,7 +546,7 @@ const Lists = () => {
       const authToken = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:4005/users/unfollow/${userId}`,
+        `https://api-3m0a.onrender.com/users/unfollow/${userId}`,
         {},
         {
           headers: {

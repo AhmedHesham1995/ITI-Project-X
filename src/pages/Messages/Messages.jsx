@@ -54,7 +54,7 @@ function Messages() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:4005/users/${userId}`)
+        const response = await axios.get(`https://api-3m0a.onrender.com/users/${userId}`)
         const data = response.data.data
         setUser(data);
         // console.log(data);
@@ -68,7 +68,7 @@ function Messages() {
   useEffect(() => {
     const getConversation = async () => {
       try {
-        const response = await axios.get(`http://localhost:4005/conversation/${userId}`, {
+        const response = await axios.get(`https://api-3m0a.onrender.com/conversation/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -88,7 +88,7 @@ function Messages() {
   useEffect(() => {
     const getMessages = async () => {
       try {
-        const res = await axios.get('http://localhost:4005/messages/' + currentChat?._id, {
+        const res = await axios.get('https://api-3m0a.onrender.com/messages/' + currentChat?._id, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -125,7 +125,7 @@ function Messages() {
     })
 
     try {
-      const res = await axios.post('http://localhost:4005/messages', message, {
+      const res = await axios.post('https://api-3m0a.onrender.com/messages', message, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -152,7 +152,7 @@ function Messages() {
         const otherUserId = currentChat.members.find(member => member !== user._id)
         if (otherUserId) {
           try {
-            const res = await axios.get(`http://localhost:4005/users/${otherUserId}`);
+            const res = await axios.get(`https://api-3m0a.onrender.com/users/${otherUserId}`);
             setOtherUser(res.data.data)
           } catch (err) {
             console.error(err.message);
