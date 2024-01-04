@@ -1,4 +1,4 @@
-/*navbar (left)*/
+/* navbar (left) */
 .dark_mode {
   margin-top: -20px;
   margin-left: 10px;
@@ -710,7 +710,7 @@
   }
 
   .test {
-    width: 80% !important;
+    width: 100% !important;
   }
 }
 /*media query*/
@@ -986,7 +986,7 @@
   }
 
   .test {
-    width: 80% !important;
+    width: 100% !important;
   }
 }
 /*lists*/
@@ -1189,7 +1189,7 @@
   }
 
   .test {
-    width: 65% !important;
+    width: 100% !important;
   }
 
   .left {

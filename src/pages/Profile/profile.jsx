@@ -379,10 +379,11 @@ const {t}=useTranslation()
           <Col
             sm={12}
             md={6}
-            className="center"
+            className="test"
             
             
           >
+            <section className="center">
             <div>
               {user.profileCover && <img className="cover-picture" src={user.profileCover} alt="cover" />}
             </div>
@@ -460,8 +461,10 @@ const {t}=useTranslation()
               <hr />
             </div>
             <Outlet />
+            </section>
+            
           </Col>
-          <Col md={4}>
+          <Col md={4} className="right">
             <section className="right">
               <Premium />
               <div className="right__container">

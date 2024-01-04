@@ -917,7 +917,7 @@ const Communities = () => {
         <Col
           sm={12}
           md={6}
-          className="center-1 center"
+          className="center-1 center test"
           style={{
             backgroundColor: "rgb(0, 0, 0)",
             border: "#c71818",
